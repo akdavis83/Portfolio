@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,400;0,800;1,400;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+@import "https://unpkg.com/open-props";
+body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  background-image: var(--noise-3), linear-gradient(0deg, #120720, #120720);
+  font-family: "Inter";
+  color: white;
+  background-size: 100% 500%;
+}
+
+#abt-img{
+  will-change: transform, opacity;
+}
+
+.k2d {
+  font-family: "k2d";
+}
+.glow {
+  text-shadow: rgba(86, 201, 255, 0.37) 0px 0px 39px;
+}
+.glow-el {
+  filter: drop-shadow(0px 0px 15px rgba(255, 255, 255, 0.5));
+}
+.glow-el-secondary {
+  filter: drop-shadow(0px 0px 15px rgba(255, 0, 255, 0.5));
+}
+
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+}
+.app-container[fade-content]::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 30vh;
+  width: 100%;
+  background-image: linear-gradient(0deg, #120720, transparent);
+}
+.nav-border {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.nav-border a {
+  text-transform: uppercase;
+  transition: transform 150ms var(--ease-bounce-4);
+}
+.nav-border:has(a:hover) a:not(:hover):not(:first-child) {
+  transform: scale(0.95);
+}
+.nav-border button {
+  background-color: #242121;
+}
+.nav-border button:hover {
+  background-color: #444141;
+}
+.nav-border a:first-child,
+.nav-border button {
+  font-family: "K2D";
+  font-weight: 800;
+  text-transform: capitalize;
+}
+
+.circle {
+  -webkit-box-shadow: 0px 0px 100px 0px rgba(255, 255, 255, 0.3);
+  -moz-box-shadow: 0px 0px 100px 0px rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 0px 100px 0px rgba(255, 255, 255, 0.3),
+    0px 0px 100px 0px rgba(255, 255, 255, 0.9) inset;
+  background-image: var(--noise-3),
+    linear-gradient(
+      135deg,
+      transparent 35%,
+      rgba(255, 255, 255, 0.21),
+      transparent 65%
+    ),
+    linear-gradient(135deg, #3cf3ff 15%, #fa00ff);
+  filter: var(--noise-filter-1);
+}
+.primary-grad {
+  background-image: var(--noise-3),
+    linear-gradient(0deg, rgb(60, 243, 255), #3cf3ff);
+}
+.second-grad {
+  background-image: var(--noise-3), linear-gradient(0deg, #fa00ff, #fa00ff);
+}
+.bg-secondary {
+  background-color: rgb(255, 0, 255);
+}
+.fill-secondary {
+  fill: rgb(250, 0, 255);
+}
+.third-grad {
+  background-image: var(--noise-3), linear-gradient(0deg, #ff8000, #ff8000);
+}
+.polka_dots {
+  background-image: radial-gradient(
+    rgba(60, 243, 255, 0.1) 10%,
+    transparent 10%
+  );
+  background-position: 8px 8px;
+  background-size: 16px 16px;
+}
+.cross-spin {
+  transform-origin: calc(0% + 0.9em) calc(0% + 0.9em);
+}
